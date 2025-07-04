@@ -1,0 +1,165 @@
+{
+	"assetfiles": [
+		{"id": "hm", "file": "assets/models/uomo.gltf", "format":"GLTF"},
+		{"id": "a1", "file": "assets/models/running.gltf", "format":"GLTF"},
+		{"id": "a2", "file": "assets/models/idle.gltf", "format":"GLTF"},
+		{"id": "a3", "file": "assets/models/pointing.gltf", "format":"GLTF"},
+		{"id": "a4", "file": "assets/models/waving.gltf", "format":"GLTF"},
+		{"id": "ct", "file": "assets/models/MainSceneEnvOnly.gltf", "format":"GLTF"}
+	],
+	"models": [
+		{ "id": "maircondition01", "VD": "VDsimp", "model": "assets/models/M_Aircondition_01.mgcg", "format": "MGCG" },
+		{ "id": "mbed01",          "VD": "VDsimp", "model": "assets/models/M_Bed_01.mgcg",          "format": "MGCG" },
+		{ "id": "mbulletinboard01","VD": "VDsimp", "model": "assets/models/M_BulletinBoard_01.mgcg","format": "MGCG" },
+		{ "id": "mcabinet01",      "VD": "VDsimp", "model": "assets/models/M_Cabinet_01.mgcg",      "format": "MGCG" },
+		{ "id": "mclock01",        "VD": "VDsimp", "model": "assets/models/M_Clock_01.mgcg",        "format": "MGCG" },
+		{ "id": "mclosestool01",    "VD": "VDsimp", "model": "assets/models/M_Closestool_01.mgcg",    "format": "MGCG" },
+		{ "id": "mcurtain01",      "VD": "VDsimp", "model": "assets/models/M_Curtain_01.mgcg",      "format": "MGCG" },
+		{ "id": "mdoor01",         "VD": "VDsimp", "model": "assets/models/M_Door_01.mgcg",         "format": "MGCG" },
+		{ "id": "mdoor02",         "VD": "VDsimp", "model": "assets/models/M_Door_02.mgcg",         "format": "MGCG" },
+		{ "id": "mdoor03",         "VD": "VDsimp", "model": "assets/models/M_Door_03.mgcg",         "format": "MGCG" },
+		{ "id": "mfloor01",        "VD": "VDsimp", "model": "assets/models/M_Floor_01.mgcg",        "format": "MGCG" },
+		{ "id": "mfolder01",       "VD": "VDsimp", "model": "assets/models/M_Folder_01.mgcg",       "format": "MGCG" },
+		{ "id": "mhandrail01",     "VD": "VDsimp", "model": "assets/models/M_Handrail_01.mgcg",     "format": "MGCG" },
+		{ "id": "mhandrail02",     "VD": "VDsimp", "model": "assets/models/M_Handrail_02.mgcg",     "format": "MGCG" },
+		{ "id": "mhandrail03",     "VD": "VDsimp", "model": "assets/models/M_Handrail_03.mgcg",     "format": "MGCG" },
+		{ "id": "mhandrail04",     "VD": "VDsimp", "model": "assets/models/M_Handrail_04.mgcg",     "format": "MGCG" },
+		{ "id": "mhandrail05",     "VD": "VDsimp", "model": "assets/models/M_Handrail_05.mgcg",     "format": "MGCG" },
+		{ "id": "mnursesstation01","VD": "VDsimp", "model": "assets/models/M_NursesStation_01.mgcg","format": "MGCG" },
+		{ "id": "mpc01",           "VD": "VDsimp", "model": "assets/models/M_PC_01.mgcg",           "format": "MGCG" },
+		{ "id": "mpc02",           "VD": "VDsimp", "model": "assets/models/M_PC_02.mgcg",           "format": "MGCG" },
+		{ "id": "mposter01",       "VD": "VDsimp", "model": "assets/models/M_Poster_01.mgcg",       "format": "MGCG" },
+		{ "id": "mpottedplant01",  "VD": "VDsimp", "model": "assets/models/M_PottedPlant_01.mgcg",  "format": "MGCG" },
+		{ "id": "mpottedplant02",  "VD": "VDsimp", "model": "assets/models/M_PottedPlant_02.mgcg",  "format": "MGCG" },
+		{ "id": "mshelf01",        "VD": "VDsimp", "model": "assets/models/M_Shelf_01.mgcg",        "format": "MGCG" },
+		{ "id": "mshower01",       "VD": "VDsimp", "model": "assets/models/M_Shower_01.mgcg",       "format": "MGCG" },
+		{ "id": "msky01",          "VD": "VDsimp", "model": "assets/models/M_Sky_01.mgcg",          "format": "MGCG" },
+		{ "id": "msocket01",       "VD": "VDsimp", "model": "assets/models/M_Socket_01.mgcg",       "format": "MGCG" },
+		{ "id": "msofa01",         "VD": "VDsimp", "model": "assets/models/M_Sofa_01.mgcg",         "format": "MGCG" },
+		{ "id": "mthing01",        "VD": "VDsimp", "model": "assets/models/M_Thing_01.mgcg",        "format": "MGCG" },
+		{ "id": "mthing02",        "VD": "VDsimp", "model": "assets/models/M_Thing_02.mgcg",        "format": "MGCG" },
+		{ "id": "mthing03",        "VD": "VDsimp", "model": "assets/models/M_Thing_03.mgcg",        "format": "MGCG" },
+		{ "id": "mthing04",        "VD": "VDsimp", "model": "assets/models/M_Thing_04.mgcg",        "format": "MGCG" },
+		{ "id": "mthing05",        "VD": "VDsimp", "model": "assets/models/M_Thing_05.mgcg",        "format": "MGCG" },
+		{ "id": "mthing06",        "VD": "VDsimp", "model": "assets/models/M_Thing_06.mgcg",        "format": "MGCG" },
+		{ "id": "mtop01",          "VD": "VDsimp", "model": "assets/models/M_Top_01.mgcg",          "format": "MGCG" },
+		{ "id": "mtrashcan01",     "VD": "VDsimp", "model": "assets/models/M_TrashCan_01.mgcg",     "format": "MGCG" },
+		{ "id": "mwall01",         "VD": "VDsimp", "model": "assets/models/M_Wall_01.mgcg",         "format": "MGCG" }
+	],
+
+	"textures": [
+		{ "id": "taircondition01",      "texture": "assets/textures/T_Aircondition_01.PNG",      "format": "C" },
+		{ "id": "tbed01",               "texture": "assets/textures/T_Bed_01.PNG",               "format": "C" },
+		{ "id": "tbulletinboard01",     "texture": "assets/textures/T_BulletinBoard_01.PNG",     "format": "C" },
+		{ "id": "tcabinet01",           "texture": "assets/textures/T_Cabinet_01.PNG",           "format": "C" },
+		{ "id": "tchair01",             "texture": "assets/textures/T_Chair_01.PNG",             "format": "C" },
+		{ "id": "tchair02",             "texture": "assets/textures/T_Chair_02.PNG",             "format": "C" },
+		{ "id": "tclosestool01",         "texture": "assets/textures/T_Closestool_01.PNG",         "format": "C" },
+		{ "id": "tcurtain01",           "texture": "assets/textures/T_Curtain_01.PNG",           "format": "C" },
+		{ "id": "tdoor01",              "texture": "assets/textures/T_Door_01.PNG",              "format": "C" },
+		{ "id": "tdoor02",              "texture": "assets/textures/T_Door_02.PNG",              "format": "C" },
+		{ "id": "tdoor03",              "texture": "assets/textures/T_Door_03.PNG",              "format": "C" },
+		{ "id": "tfloor01",             "texture": "assets/textures/T_Floor_01.PNG",             "format": "C" },
+		{ "id": "tnursesstation01",     "texture": "assets/textures/T_NursesStation_01.PNG",     "format": "C" },
+		{ "id": "tpc01",                "texture": "assets/textures/T_PC_01.PNG",                "format": "C" },
+		{ "id": "tposter01",            "texture": "assets/textures/T_Poster_01.PNG",            "format": "C" },
+		{ "id": "tpottedplant01",       "texture": "assets/textures/T_PottedPlant_01.PNG",       "format": "C" },
+		{ "id": "tpottedplant02",       "texture": "assets/textures/T_PottedPlant_02.PNG",       "format": "C" },
+		{ "id": "tshelf01",             "texture": "assets/textures/T_Shelf_01.PNG",             "format": "C" },
+		{ "id": "tsocket01",            "texture": "assets/textures/T_Socket_01.PNG",            "format": "C" },
+		{ "id": "tsofa01",              "texture": "assets/textures/T_Sofa_01.PNG",              "format": "C" },
+		{ "id": "ttop01",               "texture": "assets/textures/T_Top_01.PNG",               "format": "C" },
+		{ "id": "ttop02",               "texture": "assets/textures/T_Top_02.PNG",               "format": "C" },
+		{ "id": "ttrashcan01",          "texture": "assets/textures/T_TrashCan_01.PNG",          "format": "C" },
+		{ "id": "twall01",              "texture": "assets/textures/T_Wall_01.PNG",              "format": "C" },
+		{ "id": "twardrobe01",          "texture": "assets/textures/T_Wardrobe_01.PNG",          "format": "C" },
+		{ "id": "twindow01",            "texture": "assets/textures/T_Window_01.PNG",            "format": "C" },
+
+		{"id": "st",    "texture": "assets/textures/uomo/Ch01_1001_Diffuse.png",	   "format": "C"},
+		{"id": "pnois", "texture": "assets/textures/Perlin_noise.png", "format": "C"},
+		{"id": "main", "texture": "assets/textures/textures0.png", "format": "C"},
+		{"id": "ttv01", "texture": "assets/textures/T_TV_01.png", "format": "C"},
+		{"id": "twall01", "texture": "assets/textures/T_Wall_01.png", "format": "C"},
+		{"id": "tnursesstations01", "texture": "assets/textures/T_Nursesstation_01.png", "format": "C"},
+		{"id": "tcurtain01", "texture": "assets/textures/T_Curtain_01.png", "format": "C"},
+		{"id": "ttop01", "texture": "assets/textures/T_Top_01.png", "format": "C"},
+		{"id": "ttop02", "texture": "assets/textures/T_Top_02.png", "format": "C"},
+		{"id": "tfloor01", "texture": "assets/textures/T_Floor_01.png", "format": "C"},
+
+		{"id": "skybox", "texture": "assets/textures/skybox.jpg", "format": "C"},
+		{"id": "tsky01", "texture": "assets/textures/T_Sky_01.png", "format": "C"},
+
+		{"id": "scba", "texture": "assets/textures/SoccerBall/ball_euro_2020_PBR_fbx_euro_ball_2020_vray_AlbedoTransparency.png", "format": "C"},
+		{"id": "scbnm", "texture": "assets/textures/SoccerBall/ball_euro_2020_PBR_fbx_euro_ball_2020_vray_Normal.png", "format": "D"},
+		{"id": "scbmt", "texture": "assets/textures/SoccerBall/Untitled.png", "format": "D"},
+		{"id": "scbrf", "texture": "assets/textures/SoccerBall/Untitled-0.png", "format": "D"},
+
+		{"id": "BACKDOOR5", "texture": "assets/textures/MainScene/BACK DOOR 5.jpg", "format": "C"},
+		{"id": "Brick8NM", "texture": "assets/textures/MainScene/Brick8 NM.png", "format": "D"},
+		{"id": "BRICK8", "texture": "assets/textures/MainScene/BRICK 8.jpg", "format": "C"},
+		{"id": "FlatNM", "texture": "assets/textures/MainScene/FlatNM.png", "format": "D"},
+		{"id": "GaraeDoor2NM", "texture": "assets/textures/MainScene/GaraeDoor2NM.png", "format": "D"},
+		{"id": "GARAGEDOOR2", "texture": "assets/textures/MainScene/GARAGE DOOR 2.jpg", "format": "C"},
+		{"id": "METALGREY", "texture": "assets/textures/MainScene/METAL GREY.png", "format": "D"},
+		{"id": "Painted_metal_02_2K_Roughness", "texture": "assets/textures/MainScene/Painted_metal_02_2K_Roughness.png", "format": "D"},
+		{"id": "Pavement_Concrete_Marked_Footprints_UV_CM_1", "texture": "assets/textures/MainScene/Pavement_Concrete_Marked_Footprints_UV_CM_1.jpg", "format": "C"},
+		{"id": "Pavement_Concrete_Marked_Footprints_UV_CM_11", "texture": "assets/textures/T_Floor_01.png", "format": "C"},
+
+		{"id": "PavementConcreteNM", "texture": "assets/textures/MainScene/PavementConcreteNM.png", "format": "D"},
+
+
+		{"id": "ROOFTOP", "texture": "assets/textures/MainScene/ROOFTOP.jpg", "format": "C"},
+		{"id": "RooftopNM", "texture": "assets/textures/MainScene/RooftopNM.png", "format": "D"},
+		{"id": "Untitled", "texture": "assets/textures/MainScene/Untitled.png", "format": "D"},
+		{"id": "Untitled-0", "texture": "assets/textures/MainScene/Untitled-0.png", "format": "D"},
+		{"id": "Untitled-1", "texture": "assets/textures/MainScene/Untitled-1.png", "format": "D"},
+		{"id": "Untitled-2", "texture": "assets/textures/MainScene/Untitled-2.png", "format": "D"},
+		{"id": "wallwhiteLINED", "texture": "assets/textures/MainScene/wall white LINED.jpg", "format": "C"},
+		{"id": "Wall6NM", "texture": "assets/textures/MainScene/Wall6NM.png", "format": "D"},
+		{"id": "WALL6", "texture": "assets/textures/MainScene/WALL 6.jpg", "format": "C"},
+		{"id": "WallWhiteLinedNM", "texture": "assets/textures/MainScene/WallWhiteLinedNM.png", "format": "D"}
+	],
+	"instances": [
+		{"technique": "CookTorranceChar", "elements": [
+		]},
+		{"technique": "CookTorranceNoiseSimp", "elements": [
+			{
+				"id": "floor01_inst",
+				"model": "mfloor01",
+				"texture": ["tfloor01", "pnois"],
+				"translate": [0, 0, 0],
+				"eulerAngles": [0, 0, 0],
+				"scale": [0.03, 0.03, 0.03]
+			},
+			{
+				"id": "nursesstation01_inst",
+				"model": "mnursesstation01",
+				"texture": ["tnursesstation01", "pnois"],
+				"translate": [0, 0, 0],
+				"eulerAngles": [0, 0, 0],
+				"scale": [0.03, 0.03, 0.03]
+			},
+			{
+				"id": "wall01_inst",
+				"model": "mwall01",
+				"texture": ["twall01", "pnois"],
+				"translate": [0, 0, 0],
+				"eulerAngles": [0, 0, 0],
+				"scale": [0.03, 0.03, 0.03]
+			},
+			{
+				"id": "top01_inst",
+				"model": "mtop01",
+				"texture": ["ttop01", "pnois"],
+				"translate": [0, 0, 0],
+				"eulerAngles": [0, 0, 0],
+				"scale": [0.03, 0.03, 0.03]
+			}
+		]},
+		{"technique": "SkyBox", "elements": [
+			{"id": "sky01",  "model": "msky01",   "texture": ["tsky01"]}
+		]},
+		{"technique": "PBR", "elements": [
+		]}
+	]
+}

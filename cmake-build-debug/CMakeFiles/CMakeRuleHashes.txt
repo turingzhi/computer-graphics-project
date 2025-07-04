@@ -1,0 +1,12 @@
+# Hashes of file build rules.
+ff177b6bd4a64e614d0deac13597ec3a CMakeFiles/Shaders
+4a9ad5b3b2da1c3967d72c980b9d0006 shaders/CookTorrance.frag.spv
+d529e4299b7beb55bb59ad6e021de1aa shaders/CookTorranceForCharacter.frag.spv
+14e2df483d661bea2c9abf0813d2efe4 shaders/PBR.frag.spv
+d2b144f2416b731935d033601c89d3a1 shaders/PosNormUvTanWeights.vert.spv
+2b99ad292a4a0c63184ec7ca6a81dc15 shaders/SimplePosNormUv.vert.spv
+1fb86c5baab902a7d4df4b2ad9d457fe shaders/SimplePosNormUvTan.vert.spv
+3e3888d9119bddcaefffdf8d91fb09fc shaders/SkyBoxShader.frag.spv
+4a65c052698fe93aac0dd9deac4ef543 shaders/SkyBoxShader.vert.spv
+433da5bf0003563037ee4ad71bbd7457 shaders/Text.frag.spv
+8f6e7ea02267f960da6c12b300c8238c shaders/Text.vert.spv

@@ -1,0 +1,4 @@
+/Users/kaizhi/Documents/semester3-exchange/computer-graphics/Wormhole d9Rkp3/project/cmake-build-debug/CMakeFiles/E09.dir
+/Users/kaizhi/Documents/semester3-exchange/computer-graphics/Wormhole d9Rkp3/project/cmake-build-debug/CMakeFiles/Shaders.dir
+/Users/kaizhi/Documents/semester3-exchange/computer-graphics/Wormhole d9Rkp3/project/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/kaizhi/Documents/semester3-exchange/computer-graphics/Wormhole d9Rkp3/project/cmake-build-debug/CMakeFiles/rebuild_cache.dir

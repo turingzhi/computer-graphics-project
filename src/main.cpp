@@ -1,4 +1,4 @@
-// This has been adapted from the Vulkan tutorial
+	// This has been adapted from the Vulkan tutorial
 #include <sstream>
 
 #include <json.hpp>
@@ -8,8 +8,9 @@
 #include "modules/Scene.hpp"
 #include "modules/Animations.hpp"
 
+
 // The uniform buffer object used in this example
-struct VertexChar {
+struct VertexChar { //character
 	glm::vec3 pos;
 	glm::vec3 norm;
 	glm::vec2 UV;
@@ -17,17 +18,17 @@ struct VertexChar {
 	glm::vec4 weights;
 };
 
-struct VertexSimp {
+struct VertexSimp { //three trucks
 	glm::vec3 pos;
 	glm::vec3 norm;
 	glm::vec2 UV;
 };
 
-struct skyBoxVertex {
+struct skyBoxVertex { //sky
 	glm::vec3 pos;
 };
 
-struct VertexTan {
+struct VertexTan { //normal mapping
 	glm::vec3 pos;
 	glm::vec3 norm;
 	glm::vec2 UV;
@@ -68,6 +69,10 @@ class E09 : public BaseProject {
 	// Descriptor Layouts [what will be passed to the shaders]
 	DescriptorSetLayout DSLlocalChar, DSLlocalSimp, DSLlocalPBR, DSLglobal, DSLskyBox;
 
+	//player position
+	glm::vec3 playerPos = glm::vec3(0.0f, 0.0f, 5.0f);
+
+
 	// Vertex formants, Pipelines [Shader couples] and Render passes
 	VertexDescriptor VDchar;
 	VertexDescriptor VDsimp;
@@ -78,18 +83,22 @@ class E09 : public BaseProject {
 	//*DBG*/Pipeline PDebug;
 
 	// Models, textures and Descriptors (values assigned to the uniforms)
-	Scene SC;
-	std::vector<VertexDescriptorRef>  VDRs;
-	std::vector<TechniqueRef> PRs;
+	Scene SC;//////
+	std::vector<VertexDescriptorRef>  VDRs;//////
+	std::vector<TechniqueRef> PRs;//////
 	//*DBG*/Model MS;
 	//*DBG*/DescriptorSet SSD;
+
+	// Model MTV01;///
+	// DescriptorSet DSTV01;///
+	// Texture TTV01;///
 	
 	// To support animation
 	#define N_ANIMATIONS 5
 	
-	AnimBlender AB;
-	Animations Anim[N_ANIMATIONS];
-	SkeletalAnimation SKA;
+	AnimBlender AB;//////
+	Animations Anim[N_ANIMATIONS];//////
+	SkeletalAnimation SKA;//////
 
 	// to provide textual feedback
 	TextMaker txt;
@@ -194,6 +203,8 @@ class E09 : public BaseProject {
 				         sizeof(glm::vec4), JOINTWEIGHT}
 				});
 
+
+		// Vertex Descriptor
 		VDsimp.init(this, {
 				  {0, sizeof(VertexSimp), VK_VERTEX_INPUT_RATE_VERTEX}
 				}, {
@@ -225,11 +236,11 @@ class E09 : public BaseProject {
 				         sizeof(glm::vec4), TANGENT}
 				});
 				
-		VDRs.resize(4);
-		VDRs[0].init("VDchar",   &VDchar);
-		VDRs[1].init("VDsimp",   &VDsimp);
-		VDRs[2].init("VDskybox", &VDskyBox);
-		VDRs[3].init("VDtan",    &VDtan);
+		VDRs.resize(4);//////
+		VDRs[0].init("VDchar",   &VDchar);//////
+		VDRs[1].init("VDsimp",   &VDsimp);//////
+		VDRs[2].init("VDskybox", &VDskyBox);//////
+		VDRs[3].init("VDtan",    &VDtan);//////
 		
 		// initializes the render passes
 		RP.init(this);
@@ -243,6 +254,9 @@ class E09 : public BaseProject {
 		Pchar.init(this, &VDchar, "shaders/PosNormUvTanWeights.vert.spv", "shaders/CookTorranceForCharacter.frag.spv", {&DSLglobal, &DSLlocalChar});
 
 		PsimpObj.init(this, &VDsimp, "shaders/SimplePosNormUV.vert.spv", "shaders/CookTorrance.frag.spv", {&DSLglobal, &DSLlocalSimp});
+		PsimpObj.setCullMode(VK_CULL_MODE_NONE);  // <-- 禁用背面剔除
+
+
 
 		PskyBox.init(this, &VDskyBox, "shaders/SkyBoxShader.vert.spv", "shaders/SkyBoxShader.frag.spv", {&DSLskyBox});
 		PskyBox.setCompareOp(VK_COMPARE_OP_LESS_OR_EQUAL);
@@ -250,8 +264,9 @@ class E09 : public BaseProject {
 		PskyBox.setPolygonMode(VK_POLYGON_MODE_FILL);
 
 		P_PBR.init(this, &VDtan, "shaders/SimplePosNormUvTan.vert.spv", "shaders/PBR.frag.spv", {&DSLglobal, &DSLlocalPBR});
+		P_PBR.setCullMode(VK_CULL_MODE_NONE);     // <-- 禁用背面剔除
 
-		PRs.resize(4);
+		PRs.resize(4);//////
 		PRs[0].init("CookTorranceChar", {
 							 {&Pchar, {//Pipeline and DSL for the first pass
 								 /*DSLglobal*/{},
@@ -289,11 +304,12 @@ class E09 : public BaseProject {
 							  }, /*TotalNtextures*/4, &VDtan);
 
 		// Models, textures and Descriptors (values assigned to the uniforms)
-		
+		// MTV01.init(this, &VDsimp, "assets/models/M_TV_01.mgcg", MGCG);///
+		// TTV01.init(this, "assets/textures/T_TV_01.PNG");///
 		// sets the size of the Descriptor Set Pool
-		DPSZs.uniformBlocksInPool = 3;
-		DPSZs.texturesInPool = 4;
-		DPSZs.setsInPool = 3;
+		DPSZs.uniformBlocksInPool = 4;///
+		DPSZs.texturesInPool = 3;///
+		DPSZs.setsInPool = 4;///
 		
 std::cout << "\nLoading the scene\n\n";
 		if(SC.init(this, /*Npasses*/1, VDRs, PRs, "assets/models/scene.json") != 0) {
@@ -315,7 +331,16 @@ std::cout << "\nLoading the scene\n\n";
 		submitCommandBuffer("main", 0, populateCommandBufferAccess, this);
 
 		// Prepares for showing the FPS count
-		txt.print(1.0f, 1.0f, "FPS:",1,"CO",false,false,true,TAL_RIGHT,TRH_RIGHT,TRV_BOTTOM,{1.0f,0.0f,0.0f,1.0f},{0.8f,0.8f,0.0f,1.0f});
+		//txt.print(1.0f, 1.0f, "FPS:",1,"CO",false,false,true,TAL_RIGHT,TRH_RIGHT,TRV_BOTTOM,{1.0f,0.0f,0.0f,1.0f},{0.8f,0.8f,0.0f,1.0f});
+		std::ostringstream posText;
+		posText << "Pos: ("
+				<< playerPos.x << ", "
+				<< playerPos.y << ", "
+				<< playerPos.z << ")";
+		//txt.print(1.0f, 1.0f,  posText.str(), 1, "CO", false, false, true,
+		  //TAL_RIGHT, TRH_RIGHT, TRV_BOTTOM,
+		 // {1.0f,0.0f,0.0f,1.0f}, {0.8f,0.8f,0.0f,1.0f});
+
 	}
 	
 	// Here you create your pipelines and Descriptor Sets!
@@ -331,6 +356,8 @@ std::cout << "\nLoading the scene\n\n";
 		
 		SC.pipelinesAndDescriptorSetsInit();
 		txt.pipelinesAndDescriptorSetsInit();
+
+		// DSTV01.init(this, &DSLlocalSimp, {TTV01.getViewAndSampler()});///
 	}
 
 	// Here you destroy your pipelines and Descriptor Sets!
@@ -385,7 +412,12 @@ std::cout << "\nLoading the scene\n\n";
 		// begin standard pass
 		RP.begin(commandBuffer, currentImage);
 
-		SC.populateCommandBuffer(commandBuffer, 0, currentImage);
+		SC.populateCommandBuffer(commandBuffer, 0, currentImage);//////
+
+		// MTV01.bind(commandBuffer);///
+		// DSTV01.bind(commandBuffer, PsimpObj, 1, currentImage);///
+		// vkCmdDrawIndexed(commandBuffer,
+		// 				static_cast<uint32_t>(MTV01.indices.size()), 1, 0, 0, 0);
 
 		RP.end(commandBuffer);
 	}
@@ -507,7 +539,7 @@ std::cout << "Playing anim: " << curAnim << "\n";
 			glm::scale(glm::mat4(1.0f), glm::vec3(0.01f)) * 
 			glm::rotate(glm::mat4(1.0f), glm::radians(90.0f), glm::vec3(1.0f,0.0f,0.0f));
 		
-		int instanceId;
+		int instanceId;//////
 		// character
 		for(instanceId = 0; instanceId < SC.TI[0].InstanceCount; instanceId++) {
 			for(int im = 0; im < TMsp->size(); im++) {
@@ -549,6 +581,18 @@ std::cout << "Playing anim: " << curAnim << "\n";
 		}
 
 
+		// show the current position
+		std::ostringstream posText;
+		posText << "Pos: ("
+				<< playerPos.x << ", "
+				<< playerPos.y << ", "
+				<< playerPos.z << ")";
+
+		txt.print(1.0f, 0.0f, posText.str(), 2, "CO", false, false, true,
+			  TAL_RIGHT, TRH_RIGHT, TRV_TOP,
+			  {0.0f, 1.0f, 0.0f, 1.0f}, {0, 0, 0, 0});
+
+
 		// updates the FPS
 		static float elapsedT = 0.0f;
 		static int countedFrames = 0;
@@ -559,9 +603,9 @@ std::cout << "Playing anim: " << curAnim << "\n";
 			float Fps = (float)countedFrames / elapsedT;
 			
 			std::ostringstream oss;
-			oss << "FPS: " << Fps << "\n";
+			//oss << "FPS: " << Fps << "\n";
 
-			txt.print(1.0f, 1.0f, oss.str(), 1, "CO", false, false, true,TAL_RIGHT,TRH_RIGHT,TRV_BOTTOM,{1.0f,0.0f,0.0f,1.0f},{0.8f,0.8f,0.0f,1.0f});
+			//txt.print(1.0f, 1.0f, oss.str(), 1, "CO", false, false, true,TAL_RIGHT,TRH_RIGHT,TRV_BOTTOM,{1.0f,0.0f,0.0f,1.0f},{0.8f,0.8f,0.0f,1.0f});
 			
 			elapsedT = 0.0f;
 		    countedFrames = 0;
@@ -602,7 +646,7 @@ std::cout << "Playing anim: " << curAnim << "\n";
 
 		// Game Logic implementation
 		// Current Player Position - statc variable make sure its value remain unchanged in subsequent calls to the procedure
-		static glm::vec3 Pos = StartingPosition;
+		//static glm::vec3 Pos = StartingPosition;
 		static glm::vec3 oldPos;
 		static int currRunState = 1;
 
@@ -615,7 +659,8 @@ std::cout << "Playing anim: " << curAnim << "\n";
 		ViewPrj = glm::mat4(1);
 		World = glm::mat4(1);
 
-		oldPos = Pos;
+
+		oldPos = playerPos;
 
 		static float Yaw = glm::radians(0.0f);
 		static float Pitch = glm::radians(0.0f);
@@ -627,8 +672,10 @@ std::cout << "Playing anim: " << curAnim << "\n";
 		// Position
 		glm::vec3 ux = glm::rotate(glm::mat4(1.0f), Yaw, glm::vec3(0,1,0)) * glm::vec4(1,0,0,1);
 		glm::vec3 uz = glm::rotate(glm::mat4(1.0f), Yaw, glm::vec3(0,1,0)) * glm::vec4(0,0,-1,1);
-		Pos = Pos + MOVE_SPEED * m.x * ux * deltaT;
-		Pos = Pos - MOVE_SPEED * m.z * uz * deltaT;
+		glm::vec3 uy = glm::rotate(glm::mat4(1.0f), Yaw, glm::vec3(0,1,0)) * glm::vec4(0,1,0,1);
+		playerPos = playerPos + MOVE_SPEED * m.x * ux * deltaT;
+		playerPos = playerPos - MOVE_SPEED * m.z * uz * deltaT;
+		playerPos = playerPos + MOVE_SPEED * m.y * uy * deltaT;
 		
 		camHeight += MOVE_SPEED * m.y * deltaT;
 		// Rotation
@@ -648,7 +695,7 @@ std::cout << "Playing anim: " << curAnim << "\n";
 		dampedRelDir = ef * dampedRelDir + (1.0f - ef) * relDir;
 		
 		// Final world matrix computaiton
-		World = glm::translate(glm::mat4(1), Pos) * glm::rotate(glm::mat4(1.0f), dampedRelDir, glm::vec3(0,1,0));
+		World = glm::translate(glm::mat4(1), playerPos) * glm::rotate(glm::mat4(1.0f), dampedRelDir, glm::vec3(0,1,0));
 		
 		// Projection
 		glm::mat4 Prj = glm::perspective(FOVy, Ar, nearPlane, farPlane);
@@ -656,10 +703,10 @@ std::cout << "Playing anim: " << curAnim << "\n";
 
 		// View
 		// Target
-		glm::vec3 target = Pos + glm::vec3(0.0f, camHeight, 0.0f);
+		glm::vec3 target = playerPos + glm::vec3(0.0f, camHeight, 0.0f);
 
 		// Camera position, depending on Yaw parameter, but not character direction
-		glm::mat4 camWorld = glm::translate(glm::mat4(1), Pos) * glm::rotate(glm::mat4(1.0f), Yaw, glm::vec3(0,1,0));
+		glm::mat4 camWorld = glm::translate(glm::mat4(1), playerPos) * glm::rotate(glm::mat4(1.0f), Yaw, glm::vec3(0,1,0));
 		cameraPos = camWorld * glm::vec4(0.0f, camHeight + camDist * sin(Pitch), camDist * cos(Pitch), 1.0);
 		// Damping of camera
 		dampedCamPos = ef * dampedCamPos + (1.0f - ef) * cameraPos;
@@ -668,7 +715,7 @@ std::cout << "Playing anim: " << curAnim << "\n";
 
 		ViewPrj = Prj * View;
 		
-		float vel = length(Pos - oldPos) / deltaT;
+		float vel = length(playerPos - oldPos) / deltaT;
 		
 		if(vel < 0.2) {
 			if(currRunState != 1) {
