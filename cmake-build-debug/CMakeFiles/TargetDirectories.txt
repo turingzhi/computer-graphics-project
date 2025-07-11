@@ -1,0 +1,4 @@
+/Users/shuaizou/Desktop/CG - Project/computer-graphics-project-main 2/cmake-build-debug/CMakeFiles/E09.dir
+/Users/shuaizou/Desktop/CG - Project/computer-graphics-project-main 2/cmake-build-debug/CMakeFiles/Shaders.dir
+/Users/shuaizou/Desktop/CG - Project/computer-graphics-project-main 2/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/shuaizou/Desktop/CG - Project/computer-graphics-project-main 2/cmake-build-debug/CMakeFiles/rebuild_cache.dir

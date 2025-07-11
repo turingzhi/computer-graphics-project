@@ -1,0 +1,6 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" -S "/Users/shuaizou/Desktop/CG - Project/computer-graphics-project-main 2" -B "/Users/shuaizou/Desktop/CG - Project/computer-graphics-project-main 2/cmake-build-debug"
+-- Vulkan found at /Users/shuaizou/VulkanSDK/1.4.304.0/macOS/include
+-- Found SPIR-V files: 
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/shuaizou/Desktop/CG - Project/computer-graphics-project-main 2/cmake-build-debug

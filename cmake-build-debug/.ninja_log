@@ -1,0 +1,24 @@
+# ninja log v6
+2	142	1751730328857299410	shaders/CookTorranceForCharacter.frag.spv	decd276aa9421bc3
+3	152	1751730328867559696	/Users/kaizhi/Documents/semester3-exchange/computer-graphics/computer-graphics-project/computer-graphics-project/cmake-build-debug/shaders/PosNormUvTanWeights.vert.spv	85707d6c5493c68c
+6	104	1751732047031217205	/Users/kaizhi/Documents/semester3-exchange/computer-graphics/computer-graphics-project/computer-graphics-project/cmake-build-debug/shaders/CookTorrance.frag.spv	ac2f84ece4efd5ed
+2	146	1751730328864731187	/Users/kaizhi/Documents/semester3-exchange/computer-graphics/computer-graphics-project/computer-graphics-project/cmake-build-debug/shaders/PBR.frag.spv	7e730beb3cc89ee6
+3	160	1751730328878905604	/Users/kaizhi/Documents/semester3-exchange/computer-graphics/computer-graphics-project/computer-graphics-project/cmake-build-debug/shaders/SimplePosNormUvTan.vert.spv	4101b0d3678bbc9a
+2758	2941	1751813920155327455	E09	8bccf554e9657904
+2	142	1751730328857299410	/Users/kaizhi/Documents/semester3-exchange/computer-graphics/computer-graphics-project/computer-graphics-project/cmake-build-debug/shaders/CookTorranceForCharacter.frag.spv	decd276aa9421bc3
+152	338	1751730329055157599	/Users/kaizhi/Documents/semester3-exchange/computer-graphics/computer-graphics-project/computer-graphics-project/cmake-build-debug/shaders/Text.vert.spv	2462823488e7160
+2	146	1751730328864731187	shaders/PBR.frag.spv	7e730beb3cc89ee6
+3	155	1751730328873563615	/Users/kaizhi/Documents/semester3-exchange/computer-graphics/computer-graphics-project/computer-graphics-project/cmake-build-debug/shaders/SimplePosNormUv.vert.spv	906c04fad4959ff4
+147	350	1751730329069000696	shaders/SkyBoxShader.vert.spv	343e015e77e5470e
+3	160	1751730328878905604	shaders/SimplePosNormUvTan.vert.spv	4101b0d3678bbc9a
+3	152	1751730328867559696	shaders/PosNormUvTanWeights.vert.spv	85707d6c5493c68c
+6	104	1751732047031217205	shaders/CookTorrance.frag.spv	ac2f84ece4efd5ed
+3	155	1751730328873563615	shaders/SimplePosNormUv.vert.spv	906c04fad4959ff4
+142	328	1751730329043405458	/Users/kaizhi/Documents/semester3-exchange/computer-graphics/computer-graphics-project/computer-graphics-project/cmake-build-debug/shaders/SkyBoxShader.frag.spv	479000968a4d9245
+150	332	1751730329045154219	shaders/Text.frag.spv	dde8b00278b091fa
+142	328	1751730329043405458	shaders/SkyBoxShader.frag.spv	479000968a4d9245
+147	350	1751730329069000696	/Users/kaizhi/Documents/semester3-exchange/computer-graphics/computer-graphics-project/computer-graphics-project/cmake-build-debug/shaders/SkyBoxShader.vert.spv	343e015e77e5470e
+150	332	1751730329045154219	/Users/kaizhi/Documents/semester3-exchange/computer-graphics/computer-graphics-project/computer-graphics-project/cmake-build-debug/shaders/Text.frag.spv	dde8b00278b091fa
+152	338	1751730329055157599	shaders/Text.vert.spv	2462823488e7160
+6	2757	1751813917402660685	CMakeFiles/E09.dir/src/main.cpp.o	11f4070fadfe06c
+350	19559	1751730329073958909	CMakeFiles/E09.dir/src/Libs.cpp.o	a3b43a0634b425fb
